@@ -10,6 +10,10 @@
 		C7BEB3211B18FEA6007E820E /* JRUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C7BEB3201B18FEA6007E820E /* JRUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C7BEB3271B18FEA6007E820E /* JRUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7BEB31B1B18FEA6007E820E /* JRUIKit.framework */; };
 		C7BEB32E1B18FEA6007E820E /* JRUIKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7BEB32D1B18FEA6007E820E /* JRUIKitTests.m */; };
+		C7BEB33B1B18FEDD007E820E /* JRButton.h in Headers */ = {isa = PBXBuildFile; fileRef = C7BEB3371B18FEDD007E820E /* JRButton.h */; };
+		C7BEB33C1B18FEDD007E820E /* JRButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C7BEB3381B18FEDD007E820E /* JRButton.m */; };
+		C7BEB33D1B18FEDD007E820E /* JRImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = C7BEB3391B18FEDD007E820E /* JRImageView.h */; };
+		C7BEB33E1B18FEDD007E820E /* JRImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7BEB33A1B18FEDD007E820E /* JRImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,10 @@
 		C7BEB3261B18FEA6007E820E /* JRUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JRUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7BEB32C1B18FEA6007E820E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7BEB32D1B18FEA6007E820E /* JRUIKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRUIKitTests.m; sourceTree = "<group>"; };
+		C7BEB3371B18FEDD007E820E /* JRButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRButton.h; sourceTree = "<group>"; };
+		C7BEB3381B18FEDD007E820E /* JRButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRButton.m; sourceTree = "<group>"; };
+		C7BEB3391B18FEDD007E820E /* JRImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRImageView.h; sourceTree = "<group>"; };
+		C7BEB33A1B18FEDD007E820E /* JRImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,10 @@
 			isa = PBXGroup;
 			children = (
 				C7BEB3201B18FEA6007E820E /* JRUIKit.h */,
+				C7BEB3371B18FEDD007E820E /* JRButton.h */,
+				C7BEB3381B18FEDD007E820E /* JRButton.m */,
+				C7BEB3391B18FEDD007E820E /* JRImageView.h */,
+				C7BEB33A1B18FEDD007E820E /* JRImageView.m */,
 				C7BEB31E1B18FEA6007E820E /* Supporting Files */,
 			);
 			path = JRUIKit;
@@ -109,7 +121,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7BEB33B1B18FEDD007E820E /* JRButton.h in Headers */,
 				C7BEB3211B18FEA6007E820E /* JRUIKit.h in Headers */,
+				C7BEB33D1B18FEDD007E820E /* JRImageView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +223,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7BEB33E1B18FEDD007E820E /* JRImageView.m in Sources */,
+				C7BEB33C1B18FEDD007E820E /* JRButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,3 +17,5 @@ FOUNDATION_EXPORT const unsigned char JRUIKitVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <JRUIKit/PublicHeader.h>
 
 
+#import <JRUIKit/JRButton.h>
+#import <JRUIKit/JRImageView.h>
