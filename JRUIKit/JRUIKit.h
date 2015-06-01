@@ -19,3 +19,4 @@ FOUNDATION_EXPORT const unsigned char JRUIKitVersionString[];
 
 #import <JRUIKit/JRButton.h>
 #import <JRUIKit/JRImageView.h>
+#import <JRUIKit/JRProgressView.h>

@@ -2,7 +2,7 @@
 //  JRUIKitTests.m
 //  JRUIKitTests
 //
-//  Created by JoinUs Development on 5/29/15.
+//  Created by Joshua Martin on 5/29/15.
 //  Copyright (c) 2015 Joshua Martin. All rights reserved.
 //
 

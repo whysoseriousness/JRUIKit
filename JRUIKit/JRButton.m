@@ -48,4 +48,15 @@
 }
 
 
+-(void)setBorderWidth:(NSInteger)borderWidth{
+    _borderWidth = borderWidth;
+    [self setupUI];
+}
+
+-(void)setBorderColor:(UIColor *)borderColor{
+    _borderColor = borderColor;
+    [self setupUI];
+}
+
+
 @end

@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		C7899EA01B1CF35C00F6FBC2 /* JRProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = C7899E9E1B1CF35C00F6FBC2 /* JRProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C7899EA11B1CF35C00F6FBC2 /* JRProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7899E9F1B1CF35C00F6FBC2 /* JRProgressView.m */; };
 		C7BEB3211B18FEA6007E820E /* JRUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C7BEB3201B18FEA6007E820E /* JRUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C7BEB3271B18FEA6007E820E /* JRUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7BEB31B1B18FEA6007E820E /* JRUIKit.framework */; };
 		C7BEB32E1B18FEA6007E820E /* JRUIKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7BEB32D1B18FEA6007E820E /* JRUIKitTests.m */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C7899E9E1B1CF35C00F6FBC2 /* JRProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JRProgressView.h; path = ../JRProgressView.h; sourceTree = "<group>"; };
+		C7899E9F1B1CF35C00F6FBC2 /* JRProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JRProgressView.m; path = ../JRProgressView.m; sourceTree = "<group>"; };
 		C7BEB31B1B18FEA6007E820E /* JRUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JRUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7BEB31F1B18FEA6007E820E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7BEB3201B18FEA6007E820E /* JRUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRUIKit.h; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				C7BEB3201B18FEA6007E820E /* JRUIKit.h */,
+				C7899E9E1B1CF35C00F6FBC2 /* JRProgressView.h */,
+				C7899E9F1B1CF35C00F6FBC2 /* JRProgressView.m */,
 				C7BEB3371B18FEDD007E820E /* JRButton.h */,
 				C7BEB3381B18FEDD007E820E /* JRButton.m */,
 				C7BEB3391B18FEDD007E820E /* JRImageView.h */,
@@ -137,6 +143,7 @@
 			files = (
 				C7BEB33B1B18FEDD007E820E /* JRButton.h in Headers */,
 				C7BEB3211B18FEA6007E820E /* JRUIKit.h in Headers */,
+				C7899EA01B1CF35C00F6FBC2 /* JRProgressView.h in Headers */,
 				C7BEB33D1B18FEDD007E820E /* JRImageView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +266,7 @@
 			files = (
 				C7BEB33E1B18FEDD007E820E /* JRImageView.m in Sources */,
 				C7BEB33C1B18FEDD007E820E /* JRButton.m in Sources */,
+				C7899EA11B1CF35C00F6FBC2 /* JRProgressView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
