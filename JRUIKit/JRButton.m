@@ -1,8 +1,8 @@
 //
-//  SCButton.m
-//  SocialClout
+//  JRButton.m
+//  jm54
 //
-//  Created by JoinUs Development on 5/19/15.
+//  Created by Joshua Martin onon 5/19/15.
 //  Copyright (c) 2015 Join Us. All rights reserved.
 //
 

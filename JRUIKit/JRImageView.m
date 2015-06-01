@@ -1,14 +1,14 @@
 //
-//  SCImageView.m
-//  SocialClout
+//  JRImageView.m
+//  jm54
 //
-//  Created by JoinUs Development on 5/19/15.
+//  Created by Joshua Martin on 5/19/15.
 //  Copyright (c) 2015 Join Us. All rights reserved.
 //
 
 #import "JRImageView.h"
 
-@implementation SCImageView
+@implementation JRImageView
 
 /*
 // Only override drawRect: if you perform custom drawing.

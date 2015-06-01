@@ -10,9 +10,9 @@
 		C7BEB3211B18FEA6007E820E /* JRUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C7BEB3201B18FEA6007E820E /* JRUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C7BEB3271B18FEA6007E820E /* JRUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7BEB31B1B18FEA6007E820E /* JRUIKit.framework */; };
 		C7BEB32E1B18FEA6007E820E /* JRUIKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7BEB32D1B18FEA6007E820E /* JRUIKitTests.m */; };
-		C7BEB33B1B18FEDD007E820E /* JRButton.h in Headers */ = {isa = PBXBuildFile; fileRef = C7BEB3371B18FEDD007E820E /* JRButton.h */; };
+		C7BEB33B1B18FEDD007E820E /* JRButton.h in Headers */ = {isa = PBXBuildFile; fileRef = C7BEB3371B18FEDD007E820E /* JRButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C7BEB33C1B18FEDD007E820E /* JRButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C7BEB3381B18FEDD007E820E /* JRButton.m */; };
-		C7BEB33D1B18FEDD007E820E /* JRImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = C7BEB3391B18FEDD007E820E /* JRImageView.h */; };
+		C7BEB33D1B18FEDD007E820E /* JRImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = C7BEB3391B18FEDD007E820E /* JRImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C7BEB33E1B18FEDD007E820E /* JRImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7BEB33A1B18FEDD007E820E /* JRImageView.m */; };
 /* End PBXBuildFile section */
 
@@ -414,6 +414,7 @@
 				C7BEB3331B18FEA6007E820E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C7BEB3341B18FEA6007E820E /* Build configuration list for PBXNativeTarget "JRUIKitTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +423,7 @@
 				C7BEB3361B18FEA6007E820E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
