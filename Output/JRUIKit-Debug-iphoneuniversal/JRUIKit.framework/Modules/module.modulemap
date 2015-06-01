@@ -1,0 +1,6 @@
+framework module JRUIKit {
+  umbrella header "JRUIKit.h"
+
+  export *
+  module * { export * }
+}

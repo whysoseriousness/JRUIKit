@@ -4,14 +4,24 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>JRUIKit-Universal.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>16</integer>
+		</dict>
 		<key>JRUIKit.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>C75E97E41B1CB53D0027810E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C7BEB31A1B18FEA6007E820E</key>
 		<dict>
 			<key>primary</key>

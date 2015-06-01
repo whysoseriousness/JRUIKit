@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		C75E97E41B1CB53D0027810E /* JRUIKit-Universal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C75E97E71B1CB53D0027810E /* Build configuration list for PBXAggregateTarget "JRUIKit-Universal" */;
+			buildPhases = (
+				C75E97E81B1CB5520027810E /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "JRUIKit-Universal";
+			productName = "JRUIKit-Universal";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		C7BEB3211B18FEA6007E820E /* JRUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C7BEB3201B18FEA6007E820E /* JRUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C7BEB3271B18FEA6007E820E /* JRUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7BEB31B1B18FEA6007E820E /* JRUIKit.framework */; };
@@ -175,6 +189,9 @@
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Joshua Martin";
 				TargetAttributes = {
+					C75E97E41B1CB53D0027810E = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
 					C7BEB31A1B18FEA6007E820E = {
 						CreatedOnToolsVersion = 6.3.2;
 					};
@@ -197,6 +214,7 @@
 			targets = (
 				C7BEB31A1B18FEA6007E820E /* JRUIKit */,
 				C7BEB3251B18FEA6007E820E /* JRUIKitTests */,
+				C75E97E41B1CB53D0027810E /* JRUIKit-Universal */,
 			);
 		};
 /* End PBXProject section */
@@ -217,6 +235,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C75E97E81B1CB5520027810E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "######################\n# Options\n######################\n\nREVEAL_ARCHIVE_IN_FINDER=false\n\nFRAMEWORK_NAME=\"${PROJECT_NAME}\"\n\nSIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${FRAMEWORK_NAME}.framework\"\n\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_NAME}.framework\"\n\nUNIVERSAL_LIBRARY_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal\"\n\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${FRAMEWORK_NAME}.framework\"\n\n\n######################\n# Build Frameworks\n######################\n\nxcodebuild -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} -sdk iphonesimulator -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator 2>&1\n\nxcodebuild -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} -sdk iphoneos -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos 2>&1\n\n######################\n# Create directory for universal\n######################\n\nrm -rf \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${FRAMEWORK}\"\n\n\n######################\n# Copy files Framework\n######################\n\ncp -r \"${DEVICE_LIBRARY_PATH}/.\" \"${FRAMEWORK}\"\n\n\n######################\n# Make an universal binary\n######################\n\nlipo \"${SIMULATOR_LIBRARY_PATH}/${FRAMEWORK_NAME}\" \"${DEVICE_LIBRARY_PATH}/${FRAMEWORK_NAME}\" -create -output \"${FRAMEWORK}/${FRAMEWORK_NAME}\" | echo\n\n# For Swift framework, Swiftmodule needs to be copied in the universal framework\nif [ -d \"${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\ncp -f ${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\n                                                                      fi\n                                                                      \n                                                                      if [ -d \"${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\n                                                                      cp -f ${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\n                                                                      fi\n                                                                      \n                                                                      ######################\n                                                                      # On Release, copy the result to release directory\n                                                                      ######################\n                                                                      OUTPUT_DIR=\"${PROJECT_DIR}/Output/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneuniversal/\"\n                                                                      \n                                                                      rm -rf \"$OUTPUT_DIR\"\n                                                                      mkdir -p \"$OUTPUT_DIR\"\n                                                                      \n                                                                      cp -r \"${FRAMEWORK}\" \"$OUTPUT_DIR\"\n                                                                      \n                                                                      if [ ${REVEAL_ARCHIVE_IN_FINDER} = true ]; then\n                                                                      open \"${OUTPUT_DIR}/\"\n                                                                      fi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C7BEB3161B18FEA6007E820E /* Sources */ = {
@@ -247,10 +281,29 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		C75E97E51B1CB53D0027810E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C75E97E61B1CB53D0027810E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		C7BEB32F1B18FEA6007E820E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+					i386,
+				);
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -298,6 +351,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+					i386,
+				);
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -398,6 +456,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C75E97E71B1CB53D0027810E /* Build configuration list for PBXAggregateTarget "JRUIKit-Universal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C75E97E51B1CB53D0027810E /* Debug */,
+				C75E97E61B1CB53D0027810E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C7BEB3151B18FEA6007E820E /* Build configuration list for PBXProject "JRUIKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
