@@ -21,8 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		C7899EA01B1CF35C00F6FBC2 /* JRProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = C7899E9E1B1CF35C00F6FBC2 /* JRProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C7899EA11B1CF35C00F6FBC2 /* JRProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7899E9F1B1CF35C00F6FBC2 /* JRProgressView.m */; };
+		C7899EA41B1D00F300F6FBC2 /* JRProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = C7899EA21B1D00F300F6FBC2 /* JRProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C7899EA51B1D00F300F6FBC2 /* JRProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7899EA31B1D00F300F6FBC2 /* JRProgressView.m */; };
 		C7BEB3211B18FEA6007E820E /* JRUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C7BEB3201B18FEA6007E820E /* JRUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C7BEB3271B18FEA6007E820E /* JRUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7BEB31B1B18FEA6007E820E /* JRUIKit.framework */; };
 		C7BEB32E1B18FEA6007E820E /* JRUIKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7BEB32D1B18FEA6007E820E /* JRUIKitTests.m */; };
@@ -43,8 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C7899E9E1B1CF35C00F6FBC2 /* JRProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JRProgressView.h; path = ../JRProgressView.h; sourceTree = "<group>"; };
-		C7899E9F1B1CF35C00F6FBC2 /* JRProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JRProgressView.m; path = ../JRProgressView.m; sourceTree = "<group>"; };
+		C7899EA21B1D00F300F6FBC2 /* JRProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRProgressView.h; sourceTree = "<group>"; };
+		C7899EA31B1D00F300F6FBC2 /* JRProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRProgressView.m; sourceTree = "<group>"; };
 		C7BEB31B1B18FEA6007E820E /* JRUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JRUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7BEB31F1B18FEA6007E820E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7BEB3201B18FEA6007E820E /* JRUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRUIKit.h; sourceTree = "<group>"; };
@@ -98,10 +98,10 @@
 			isa = PBXGroup;
 			children = (
 				C7BEB3201B18FEA6007E820E /* JRUIKit.h */,
-				C7899E9E1B1CF35C00F6FBC2 /* JRProgressView.h */,
-				C7899E9F1B1CF35C00F6FBC2 /* JRProgressView.m */,
 				C7BEB3371B18FEDD007E820E /* JRButton.h */,
 				C7BEB3381B18FEDD007E820E /* JRButton.m */,
+				C7899EA21B1D00F300F6FBC2 /* JRProgressView.h */,
+				C7899EA31B1D00F300F6FBC2 /* JRProgressView.m */,
 				C7BEB3391B18FEDD007E820E /* JRImageView.h */,
 				C7BEB33A1B18FEDD007E820E /* JRImageView.m */,
 				C7BEB31E1B18FEA6007E820E /* Supporting Files */,
@@ -143,7 +143,7 @@
 			files = (
 				C7BEB33B1B18FEDD007E820E /* JRButton.h in Headers */,
 				C7BEB3211B18FEA6007E820E /* JRUIKit.h in Headers */,
-				C7899EA01B1CF35C00F6FBC2 /* JRProgressView.h in Headers */,
+				C7899EA41B1D00F300F6FBC2 /* JRProgressView.h in Headers */,
 				C7BEB33D1B18FEDD007E820E /* JRImageView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,7 +255,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "######################\n# Options\n######################\n\nREVEAL_ARCHIVE_IN_FINDER=false\n\nFRAMEWORK_NAME=\"${PROJECT_NAME}\"\n\nSIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${FRAMEWORK_NAME}.framework\"\n\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_NAME}.framework\"\n\nUNIVERSAL_LIBRARY_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal\"\n\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${FRAMEWORK_NAME}.framework\"\n\n\n######################\n# Build Frameworks\n######################\n\nxcodebuild -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} -sdk iphonesimulator -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator 2>&1\n\nxcodebuild -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} -sdk iphoneos -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos 2>&1\n\n######################\n# Create directory for universal\n######################\n\nrm -rf \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${FRAMEWORK}\"\n\n\n######################\n# Copy files Framework\n######################\n\ncp -r \"${DEVICE_LIBRARY_PATH}/.\" \"${FRAMEWORK}\"\n\n\n######################\n# Make an universal binary\n######################\n\nlipo \"${SIMULATOR_LIBRARY_PATH}/${FRAMEWORK_NAME}\" \"${DEVICE_LIBRARY_PATH}/${FRAMEWORK_NAME}\" -create -output \"${FRAMEWORK}/${FRAMEWORK_NAME}\" | echo\n\n# For Swift framework, Swiftmodule needs to be copied in the universal framework\nif [ -d \"${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\ncp -f ${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\n                                                                      fi\n                                                                      \n                                                                      if [ -d \"${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\n                                                                      cp -f ${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\n                                                                      fi\n                                                                      \n                                                                      ######################\n                                                                      # On Release, copy the result to release directory\n                                                                      ######################\n                                                                      OUTPUT_DIR=\"${PROJECT_DIR}/Output/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneuniversal/\"\n                                                                      \n                                                                      rm -rf \"$OUTPUT_DIR\"\n                                                                      mkdir -p \"$OUTPUT_DIR\"\n                                                                      \n                                                                      cp -r \"${FRAMEWORK}\" \"$OUTPUT_DIR\"\n                                                                      \n                                                                      if [ ${REVEAL_ARCHIVE_IN_FINDER} = true ]; then\n                                                                      open \"${OUTPUT_DIR}/\"\n                                                                      fi";
+			shellScript = "######################\n# Options\n######################\n\nREVEAL_ARCHIVE_IN_FINDER=false\n\nFRAMEWORK_NAME=\"${PROJECT_NAME}\"\n\nSIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${FRAMEWORK_NAME}.framework\"\n\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_NAME}.framework\"\n\nUNIVERSAL_LIBRARY_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal\"\n\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${FRAMEWORK_NAME}.framework\"\n\n\n######################\n# Build Frameworks\n######################\n#\n# xcodebuild -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} -sdk iphonesimulator -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator 2>&1\n#\n# xcodebuild -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} -sdk iphoneos -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos 2>&1\n#\n\n\nxcodebuild -workspace JoinUs.xcworkspace -scheme ${PROJECT_NAME} -sdk iphonesimulator -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator 2>&1\n\nxcodebuild -workspace JoinUs.xcworkspace -scheme ${PROJECT_NAME} -sdk iphoneos -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos 2>&1\n######################\n# Create directory for universal\n######################\n\nrm -rf \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${FRAMEWORK}\"\n\n\n######################\n# Copy files Framework\n######################\n\ncp -r \"${DEVICE_LIBRARY_PATH}/.\" \"${FRAMEWORK}\"\n\n\n######################\n# Make an universal binary\n######################\n\nlipo \"${SIMULATOR_LIBRARY_PATH}/${FRAMEWORK_NAME}\" \"${DEVICE_LIBRARY_PATH}/${FRAMEWORK_NAME}\" -create -output \"${FRAMEWORK}/${FRAMEWORK_NAME}\" | echo\n\n# For Swift framework, Swiftmodule needs to be copied in the universal framework\nif [ -d \"${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\ncp -f ${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\n                                                                      fi\n                                                                      \n                                                                      if [ -d \"${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\n                                                                      cp -f ${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\n                                                                      fi\n                                                                      \n                                                                      ######################\n                                                                      # On Release, copy the result to release directory\n                                                                      ######################\n                                                                      OUTPUT_DIR=\"${PROJECT_DIR}/Output/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneuniversal/\"\n                                                                      \n                                                                      rm -rf \"$OUTPUT_DIR\"\n                                                                      mkdir -p \"$OUTPUT_DIR\"\n                                                                      \n                                                                      cp -r \"${FRAMEWORK}\" \"$OUTPUT_DIR\"\n                                                                      \n                                                                      if [ ${REVEAL_ARCHIVE_IN_FINDER} = true ]; then\n                                                                      open \"${OUTPUT_DIR}/\"\n                                                                      fi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -266,7 +266,7 @@
 			files = (
 				C7BEB33E1B18FEDD007E820E /* JRImageView.m in Sources */,
 				C7BEB33C1B18FEDD007E820E /* JRButton.m in Sources */,
-				C7899EA11B1CF35C00F6FBC2 /* JRProgressView.m in Sources */,
+				C7899EA51B1D00F300F6FBC2 /* JRProgressView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +404,7 @@
 		C7BEB3321B18FEA6007E820E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -411,6 +412,7 @@
 				INFOPLIST_FILE = JRUIKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -419,6 +421,7 @@
 		C7BEB3331B18FEA6007E820E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;

@@ -13,5 +13,9 @@ IB_DESIGNABLE
 @interface JRButton : UIButton
 
 @property (assign, nonatomic) IBInspectable NSInteger cornerRadius;
+@property (assign, nonatomic) IBInspectable NSInteger borderWidth;
+@property (assign, nonatomic) IBInspectable UIColor*  borderColor;
+
+-(void)setupUI;
 
 @end
